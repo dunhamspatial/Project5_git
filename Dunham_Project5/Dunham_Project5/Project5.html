@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dunham_Lesson5</title>
+	<meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"> </script>
+    <script src="Scripts/Project5.js"></script>
+</head>
+<body>
+    <div class="row">
+        <h1>Lesson 5 Fusion Tables API</h1>
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h3>Technology Stack</h3>
+            </div>
+                <div class="panel-content">
+                    <p>
+                        This project was built with the same stack of technology that I used in Lesson 3. The only major change was
+                        that I redesigned the page's layout using the bootstrap framework with no template.
+                        The greatest challenge I encountered while constructing this project was with the basemap styling. I 
+                        utilized the Google styling wizard to style the map with a Neapolitan ice cream color scheme and no labels.
+                        After copying the JSON code to my new customMapType variable, the map would not render. After several attempts
+                        to correct the issue, I discovered that I was unable to get the code to work while I was passing the mapTypeIds
+                        in through a second mapOptions variable. For some reason, all of the other parameters I declared in the mapOptions
+                        variable would pass through to the map, but not the style. I eliminated the mapOption variable and provided all
+                        my parameters directly via the map constructor. A smaller issue I ran into was how to utilize the marker shadow 
+                        into my project. After seeing the discussion thread that marker shadows had been removed from the Gooogle Map API,
+                        I decided that I would merge the two separate images into a single image, so that the shadows would still appear on my map.
+                        After merging the images, I utilized the shape property to limit the clickable boundary of the image to just the
+                        ice cream cone and not the shadow. 
+                    </p>
+                </div>       
+        </div>  
+    <div id="mapCanvas"></div>
+    <!--<input id="googft-legend-open" style="display:none" type="button" value="Legend"></input>
+    <div id="googft-legend">
+        <p id="googft-legend-title">Median Household Income</p>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #fff2cc"></span>
+            <span class="googft-legend-range">$36,919.00</span>
+        </div>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #ffe599"></span>
+            <br />
+        </div>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #ffd966"></span>
+            <br />
+        </div>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #f1c232"></span>
+            <br />
+        </div>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #bf9000"></span>
+            <br />
+        </div>
+        <div>
+            <span class="googft-legend-swatch" style="background-color: #7f6000"></span>
+            <span class="googft-legend-range">$69,825.00</span>
+        </div>
+        <div class="googft-legend-source">
+            <a href="data?docid=1Nv_rJPZdvqj99Qp4fFT1J1pH44U8TEehvc0Qxaxr" target="_blank">https://en.wikipedia.org/wiki/List_of_U.S._states_by_income</a>
+        </div>
+        <input id="googft-legend-close" style="display:none" type="button" value="Hide"></input>-->
+    </div> 
+</body>
+</html>
