@@ -15,8 +15,10 @@ function initMap() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    var sql = encodeURIComponent("SELECT Name, Med_Inc, X, Y FROM 1grn8jrQ1ln1dS7B1G0y6vb8dWwVpg23NDXhz97ox  ORDER BY Name");
+    var sql = encodeURIComponent("SELECT Name, Med_Inc, X, Y FROM 1grn8jrQ1ln1dS7B1G0y6vb8dWwVpg23NDXhz97ox ORDER BY Name");
     var query = new google.visualization.Query('http://www.google.com/fusiontables/gvizdata?tq=' + sql);
+
+    alert(String(query));
 
     query.send(getData);
 }
@@ -61,7 +63,7 @@ function getData(response) {
 
 
 function createMarker(point, info) {
-    var iconURL = 'cone.png'; var iconSize = new google.maps.Size(20, 34);
+    var iconURL = 'coneandshadow.png'; var iconSize = new google.maps.Size(20, 34);
     var iconOrigin = new google.maps.Point(0, 0); var iconAnchor = new google.maps.Point(10, 34);
 
     var myIcon = {
