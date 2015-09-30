@@ -18,8 +18,6 @@ function initMap() {
     var sql = encodeURIComponent("SELECT Name, Med_Inc, X, Y FROM 1grn8jrQ1ln1dS7B1G0y6vb8dWwVpg23NDXhz97ox ORDER BY Name");
     var query = new google.visualization.Query('http://www.google.com/fusiontables/gvizdata?tq=' + sql);
 
-    alert(String(query));
-
     query.send(getData);
 }
 
@@ -63,8 +61,8 @@ function getData(response) {
 
 
 function createMarker(point, info) {
-    var iconURL = 'dollarsign.png'; var iconSize = new google.maps.Size(20, 34);
-    var iconOrigin = new google.maps.Point(0, 0); var iconAnchor = new google.maps.Point(10, 34);
+    var iconURL = 'dollarsign.png'; var iconSize = new google.maps.Size(14, 26);
+    var iconOrigin = new google.maps.Point(0, 0); var iconAnchor = new google.maps.Point(7, 26);
 
     var myIcon = {
         url: iconURL,
@@ -73,10 +71,10 @@ function createMarker(point, info) {
         anchor: iconAnchor
     };
 
-    var iconShape = [8, 33, 4, 15, 1, 15, 0, 12, 0, 5, 6, 0, 12, 0, 19, 14, 15, 15, 10, 33];
+    var iconShape = [0,0, 14,26];
     var myMarkerShape = {
         coord: iconShape,
-        type: 'poly'
+        type: 'rect'
     };
 
     var myMarkerOpts = {
