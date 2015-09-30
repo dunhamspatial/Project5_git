@@ -63,7 +63,7 @@ function getData(response) {
 
 
 function createMarker(point, info) {
-    var iconURL = 'coneandshadow.png'; var iconSize = new google.maps.Size(20, 34);
+    var iconURL = 'dollarsign.png'; var iconSize = new google.maps.Size(20, 34);
     var iconOrigin = new google.maps.Point(0, 0); var iconAnchor = new google.maps.Point(10, 34);
 
     var myIcon = {
