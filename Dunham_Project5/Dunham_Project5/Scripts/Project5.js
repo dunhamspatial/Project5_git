@@ -7,11 +7,11 @@ function initMap() {
     markers = [];
     infoWindow = new google.maps.InfoWindow()
 
-    var center = new google.maps.LatLng(40.14742784294337, -85.41570198864997);
+    var center = new google.maps.LatLng(48, -104);
 
     map = new google.maps.Map(document.getElementById('mapCanvas'), {
         center: center,
-        zoom: 4,
+        zoom: 3,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -27,9 +27,9 @@ function getData(response) {
     var side_html = '<table style="border-collapse: collapse" border="1" \
                        cellpadding="5"> \
                        <thead> \
-                         <tr style="background-color:#e0e0e0"> \
-                           <th>City</th> \
-                           <th>Population</th> \
+                         <tr style="background-color:#DFF0D8"> \
+                           <th>State</th> \
+                           <th>Median Household Income</th> \
                          </tr> \
                        </thead> \
                        <tbody>';
@@ -38,15 +38,15 @@ function getData(response) {
         var lat = dt.getValue(i, 3);
         var lng = dt.getValue(i, 2);
         var name = dt.getValue(i, 0);
-        var pop = dt.getValue(i, 1);
+        var medInc = dt.getValue(i, 1);
 
         var pt = new google.maps.LatLng(lat, lng);
 
-        var html = "<strong>" + name + "</strong><br />" + pop;
+        var html = "<strong>" + name + "</strong><br />" + medInc;
 
         side_html += '<tr> \
-                      <td><a href="javascript:myclick(' + i + ')">' + name + '</a></td> \
-                      <td>' + pop + '</td> \
+                      <td><a href="javascript:myclick(' + i + ')">' + '  ' + name + '</a></td> \
+                      <td>' +'     ' + '$' + medInc + '</td> \
                     </tr>';
 
 
@@ -98,39 +98,3 @@ function createMarker(point, info) {
 function myclick(num) {
     google.maps.event.trigger(markers[num], "click");
 }
-
-
-
-
-
-
-////google.load('visualization', '1', { 'packages': ['table'] });
-
-//function initMap() {
-//    var map = new google.maps.Map(document.getElementById('mapCanvas'), {
-//        center: new google.maps.LatLng(40.14742784294337, -85.41570198864997),
-//        zoom: 3,
-//        mapTypeId: google.maps.MapTypeId.ROADMAP
-//    });
-
-
-//    layer = new google.maps.FusionTablesLayer({
-//        map: map,
-//        heatmap: { enabled: false },
-//        query: {
-//            select: "col0",
-//            from: "1Nv_rJPZdvqj99Qp4fFT1J1pH44U8TEehvc0Qxaxr",
-//            where: ""
-//        },
-//        options: {
-//            styleId: 2,
-//            templateId: 2
-//        }
-//    });
-//    layer.setMap(mapCanvas);
-//}
-
-
-
-
-//google.maps.event.addDomListener(window, 'load', initMap);

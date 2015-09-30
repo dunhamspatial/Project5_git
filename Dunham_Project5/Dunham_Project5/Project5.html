@@ -13,30 +13,35 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
 </head>
 <body>
-    <div class="row">
+    <div class="container-fluid">
         <h1>Lesson 5 Fusion Tables API</h1>
-        <div class="panel panel-danger">
-            <div class="panel-heading"><h3>Technology Stack</h3>
+        <div class="panel panel-success">
+            <div class="panel-heading"><h3>Show me the money</h3>
             </div>
                 <div class="panel-content">
                     <p>
-                        This project was built with the same stack of technology that I used in Lesson 3. The only major change was
-                        that I redesigned the page's layout using the bootstrap framework with no template.
-                        The greatest challenge I encountered while constructing this project was with the basemap styling. I 
-                        utilized the Google styling wizard to style the map with a Neapolitan ice cream color scheme and no labels.
-                        After copying the JSON code to my new customMapType variable, the map would not render. After several attempts
-                        to correct the issue, I discovered that I was unable to get the code to work while I was passing the mapTypeIds
-                        in through a second mapOptions variable. For some reason, all of the other parameters I declared in the mapOptions
-                        variable would pass through to the map, but not the style. I eliminated the mapOption variable and provided all
-                        my parameters directly via the map constructor. A smaller issue I ran into was how to utilize the marker shadow 
-                        into my project. After seeing the discussion thread that marker shadows had been removed from the Gooogle Map API,
-                        I decided that I would merge the two separate images into a single image, so that the shadows would still appear on my map.
-                        After merging the images, I utilized the shape property to limit the clickable boundary of the image to just the
-                        ice cream cone and not the shadow. 
+                        For this project, I utilized Google's Fusion Tables to provide data to my mashup map. 
+                        Originally I created the map and data using a polygon kml and adding the data directly to the fusion table,
+                        but after spending a significant amount of time trying to construct the code to parse the KML geometry, 
+                        I scrapped the idea and started over. I decided to stick closer to the code provided by the lesson and
+                        represent my data via points instead of polygons. 
+                    </p>
+                    <p>           
+                        I started by converting a shapefile I had of the US states to a point shapefile via the centroids tool. I added the data
+                        that I planned on displaying through editing the attribute table of the shapefile. Utilizing the service <a href="http://shpescape.com/"> Shape Escape</a>
+                        allowed me to upload my shapefile directly my fusion table.
+                    </p>
+                    <p>
+                        The evolution of my code commits can be found here on <a href="https://github.com/dunhamspatial/Project5_git/commits/master">GitHub</a> I need
+                        to work on commiting my project everytime I have made a significant change to the project. I found that I often had changed significant
+                        amounts of code before I made a commit and this will make finding and correcting bugs in my code more difficult. 
                     </p>
                 </div>       
         </div>  
-    <div id="mapCanvas"></div><div id="sidebar"></div>
     </div> 
+    <div class="container-fluid">
+            <div class="col-md-8" id="mapCanvas"></div>
+            <div class="col-md-4" id="sidebar"></div>
+    </div>
 </body>
 </html>
