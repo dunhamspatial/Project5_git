@@ -1,21 +1,12 @@
-/*.row {   
-    margin: 0px 16px;
-    width: 1050px;
-}*/
-
-/*.panel panel-success{
-   width: 980px;
-}*/
 
 .panel-content{
     padding: 5px
 }
 
 #mapCanvas {
-	width:680px;
+	width:650px;
     height: 500px;
-    /*float: left;
-    margin: 0px 16px;*/
+   
 }
 
 #sidebar {
@@ -24,7 +15,4 @@
     overflow:auto;
 }
 
-.googft-info-window td{
-background-color: yellow;
 
-}

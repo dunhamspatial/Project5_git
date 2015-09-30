@@ -16,20 +16,24 @@
     <div class="container-fluid">
         <h1>Lesson 5 Fusion Tables API</h1>
         <div class="panel panel-success">
-            <div class="panel-heading"><h3>Show me the money</h3>
+            <div class="panel-heading"><h3>Show Me the Money</h3>
             </div>
                 <div class="panel-content">
                     <p>
                         For this project, I utilized Google's Fusion Tables to provide data to my mashup map. 
-                        Originally I created the map and data using a polygon kml and adding the data directly to the fusion table,
-                        but after spending a significant amount of time trying to construct the code to parse the KML geometry, 
+                        Originally, I created the map using a polygon kml and transcribed the data directly to the Fusion Table.
+                        After spending a significant amount of time trying to construct the code to parse the KML geometry, 
                         I scrapped the idea and started over. I decided to stick closer to the code provided by the lesson and
                         represent my data via points instead of polygons. 
                     </p>
                     <p>           
-                        I started by converting a shapefile I had of the US states to a point shapefile via the centroids tool. I added the data
+                        I restarted by converting a shapefile I had of the US states to a point shapefile via the centroids tool. I added the data
                         that I planned on displaying through editing the attribute table of the shapefile. Utilizing the service <a href="http://shpescape.com/"> Shape Escape</a>
-                        allowed me to upload my shapefile directly my fusion table.
+                        allowed me to upload my shapefile directly to my fusion table. I customized the info window through the Fusion Table
+                        interface, but shortly thereafter, discovered that this formatting did not carry over to my map. I perfoormed some
+                        basic html formatting on the sidebar and infowindow, but ran out of time, before I found a way to format the currency properly.
+                        I decided to use a customized symbol for the info markera and centered my map so that all of the markers could be seen. I utilized
+                        Bootstrap for the page's framework and used small containers so I could meet my target display size of 980 pixel wide. 
                     </p>
                     <p>
                         The evolution of my code commits can be found here on <a href="https://github.com/dunhamspatial/Project5_git/commits/master">GitHub</a> I need
@@ -39,9 +43,9 @@
                 </div>       
         </div>  
     </div> 
-    <div class="container-fluid">
-            <div class="col-md-8" id="mapCanvas"></div>
-            <div class="col-md-4" id="sidebar"></div>
+    <div class="container-fluid">     
+            <div class="col-sm-8" id="mapCanvas"></div>
+            <div class="col-sm-4" id="sidebar"></div>    
     </div>
 </body>
 </html>

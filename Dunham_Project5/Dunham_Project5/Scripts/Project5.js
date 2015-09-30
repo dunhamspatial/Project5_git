@@ -42,11 +42,11 @@ function getData(response) {
 
         var pt = new google.maps.LatLng(lat, lng);
 
-        var html = "<strong>" + name + "</strong><br />" + medInc;
+        var html = "<strong>" + name + "</strong><br />" + '$' + medInc;
 
         side_html += '<tr> \
-                      <td><a href="javascript:myclick(' + i + ')">' + '  ' + name + '</a></td> \
-                      <td>' +'     ' + '$' + medInc + '</td> \
+                      <td><a href="javascript:myclick(' + i + ')">' + name + '</a></td> \
+                      <td>' + '$' + medInc + '</td> \
                     </tr>';
 
 
